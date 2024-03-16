@@ -1,5 +1,7 @@
 import argparse
+
 from dundie.core import load
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -22,6 +24,6 @@ def main():
 
     args = parser.parse_args()
     try:
-        globals()[args.subcommand](args.filepath)
+        print(*globals()[args.subcommand](args.filepath))
     except KeyError:
         print(f"Subcommand {args.subcommand} not implemented.")
