@@ -1,5 +1,5 @@
 import argparse
-from .core import load
+from dundie.core import load
 
 def main():
     parser = argparse.ArgumentParser(
