@@ -1,12 +1,14 @@
 """ Core module for dundie package."""
+from .utils.log import get_logger
+
+log = get_logger()
 
 
 def load(filepath):
     """Loads data from a filepath to database."""
     try:
         with open(filepath) as file_:
-            for line in file_:
-                print(line)
+            return file_.readlines()
     except FileNotFoundError as e:
-        print(f"Error: {e}")
-        print(f"File {filepath} not found.")
+        log.error(str(e))
+        raise e
