@@ -8,7 +8,7 @@ def load(filepath):
     """Loads data from a filepath to database."""
     try:
         with open(filepath) as file_:
-            return file_.readlines()
+            return [line.strip() for line in file_.readlines()]
     except FileNotFoundError as e:
         log.error(str(e))
         raise e
