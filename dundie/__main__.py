@@ -1,6 +1,4 @@
-def main():
-    print("Executing entry point of the package dundie.")
-
+from dundie.cli import main
 
 if __name__ == "__main__":
     main()
