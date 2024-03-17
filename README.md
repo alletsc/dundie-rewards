@@ -25,4 +25,4 @@ pip install -e .
 
 ```python
 dundie load assets/people.csv
-``
+```
