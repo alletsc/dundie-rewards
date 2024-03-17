@@ -15,7 +15,8 @@ test:
 	@.venv/bin/pytest -vv -s tests/
 
 watch:
-	@.venv/bin/ptw -- -vv -s tests/
+	#@.venv/bin/ptw -- -vv -s tests/
+	@ls **/*.py | entr pytest
 
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;
