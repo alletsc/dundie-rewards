@@ -12,3 +12,4 @@ def load(filepath):
     except FileNotFoundError as e:
         log.error(str(e))
         raise e
+
