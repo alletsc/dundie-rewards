@@ -16,7 +16,7 @@ test:
 
 testci:
 	#@.venv/bin/pytest -v --junitxml=test-result.xml
-	@.venv/bin/pytest -v --junitxml=$(PWD)/test-result.xml
+	@pytest -v --junitxml=$(PWD)/test-result.xml
 
 watch:
 	#@.venv/bin/ptw
