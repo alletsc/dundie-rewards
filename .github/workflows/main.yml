@@ -26,23 +26,30 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Create and active virtualenv
+      - name: Create and activate virtualenv
         run: |
           python -m venv .venv
           echo "source .venv/bin/activate" >> $GITHUB_PATH
 
-      - name: Install project
+      - name: Install project and linting tools
         run: |
           source .venv/bin/activate
           pip install -e '.[test]'
-      - name: Check for importing style
+          pip install isort black
+
+      - name: Check for importing style with isort
         run: |
+          source .venv/bin/activate
           isort --profile=black --check --diff dundie tests integrations
-      - name: Run lint
+
+      - name: Run lint with flake8
         run: |
+          source .venv/bin/activate
           flake8
-      - name: Run black
+
+      - name: Check code formatting with black
         run: |
+          source .venv/bin/activate
           black --check --diff dundie tests integrations
 
   tests:
@@ -61,7 +68,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Create and active virtualenv
+      - name: Create and activate virtualenv
         run: |
           python -m venv .venv
           echo "source .venv/bin/activate" >> $GITHUB_PATH
@@ -73,6 +80,7 @@ jobs:
 
       - name: Run tests
         run: |
+          source .venv/bin/activate
           pytest -v --junitxml=./test-result.xml
 
       - name: Publish junit results
@@ -82,4 +90,3 @@ jobs:
           files: "./test-result.xml"
           check_name: "Test Result (Python ${{matrix.python-version}})"
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
