@@ -1,4 +1,5 @@
 """ Core module for dundie package."""
+
 from dundie.utils.log import get_logger
 
 log = get_logger()

@@ -2,3 +2,9 @@ ipython
 ipdb
 pudb
 pytest-watch
+
+# Linting - Code quality
+flake8
+pyproject-flake8
+black
+isort
