@@ -33,5 +33,5 @@ jobs:
               if: always()
               with:
                 files: "test-result.xml"
-                check_name: "Test Result (Python ${{ matrix.python-version }})"
+                check_name: "Test Result (Python ${{matrix.python-version}})"
 

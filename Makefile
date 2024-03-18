@@ -18,7 +18,7 @@ testci:
 	@.venv/bin/pytest -v --junitxml=test-result.xml
 
 watch:
-	#@.venv/bin/ptw -- -vv -s tests/
+	#@.venv/bin/ptw
 	@ls **/*.py | entr pytest
 
 clean:            ## Clean unused files.
