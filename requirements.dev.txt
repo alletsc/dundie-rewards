@@ -3,6 +3,8 @@ ipdb
 pudb
 pytest-watch
 
-# Code quality
+# Linting - Code quality
 flake8
 pyproject-flake8
+black
+isort

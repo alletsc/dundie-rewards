@@ -35,10 +35,15 @@ jobs:
         run: |
           source .venv/bin/activate
           pip install -e '.[test]'
-
+      - name: Check for importing style
+        run: |
+          isort --profile=black --check --diff dundie tests integrations
       - name: Run lint
         run: |
           flake8
+      - name: Run black
+        run: |
+          black --check --diff dundie tests integrations
 
   tests:
     needs: lint
@@ -77,4 +82,4 @@ jobs:
           files: "./test-result.xml"
           check_name: "Test Result (Python ${{matrix.python-version}})"
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          
+
