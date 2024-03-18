@@ -1,4 +1,4 @@
-.PHONY: install virtualenv ipython clean test watch testci
+.PHONY: install virtualenv ipython clean test watch
 install:
 	@echo "Installing for dev environment"
 	@.venv/bin/python -m pip install -e '.[dev]'
