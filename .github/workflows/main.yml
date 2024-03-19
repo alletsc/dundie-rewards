@@ -40,7 +40,7 @@ jobs:
       - name: Check for importing style with isort
         run: |
           source .venv/bin/activate
-          isort --profile=black --check --diff dundie tests integrations
+          isort --profile=black --check --diff dundie tests integration
 
       - name: Run lint with flake8
         run: |

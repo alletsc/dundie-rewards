@@ -1,0 +1,33 @@
+{
+    "peolpe": {
+        "joe@doe.com": {
+            "role": "Salesman",
+            "dept": "Sales",
+            "active": true,
+            "name": "Joe Doe"
+        },
+        "outro@user.com": {
+            "role": "Manager",
+            "dept": "Sales",
+            "active": true,
+            "name": "Outro"
+        }
+    },
+    "balance": {
+        "jo@doe.com": 500
+    },
+    "movement": {
+        "jo@doe.com": [
+            {
+                "date": "",
+                "value": 0
+            }
+        ]
+    },
+    "user": {
+        "jo@doe.com": {
+            "password": "123456",
+            "is_admin": false
+        }
+    }
+}

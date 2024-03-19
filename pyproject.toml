@@ -5,6 +5,12 @@ testpaths = [
     "tests",
     "integration",
 ]
+markers = [
+    "unit: marca para testes unitários.",
+    "high: marca para testes de alta prioridade.",
+    "integration: marca para testes de integração.",
+    "medium: marca para testes de prioridade média.",
+]
 
 [tool.flake8]
 exclude = [
@@ -39,3 +45,5 @@ skip = [
     "build",
 ]
 src_paths = ["dundie", "tests", "integration"]
+
+

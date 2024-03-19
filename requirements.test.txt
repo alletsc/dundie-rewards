@@ -1,4 +1,6 @@
 pytest
+pytest-forked
+click
 
 # Linting - Code quality
 flake8

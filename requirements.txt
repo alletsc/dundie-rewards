@@ -1,2 +1,4 @@
 ipython
-
+click
+rich
+rich-click

@@ -1,0 +1,43 @@
+{
+    "people": {
+        "jim@dundermifflin.com": {
+            "name": "Jim Halpert",
+            "dept": "Sales",
+            "role": "Salesman",
+            "created": false,
+            "email": "jim@dundermifflin.com"
+        },
+        "dwight@dundermifflin.com": {
+            "name": "Dwight Schrute",
+            "dept": "Sales",
+            "role": "Sales Manager",
+            "created": false,
+            "email": "dwight@dundermifflin.com"
+        },
+        "glewis@dundermifflin.com": {
+            "name": "Gabe Lewis",
+            "dept": "C-Leval",
+            "role": "CEO",
+            "created": false,
+            "email": "glewis@dundermifflin.com"
+        },
+        "joe@doe.com": {
+            "name": "Joe Doe",
+            "role": "Salesman",
+            "dept": "Sales"
+        }
+    },
+    "balance": {},
+    "movements": {},
+    "users": {
+        "jim@dundermifflin.com": {
+            "password": "mRhtJZ0y"
+        },
+        "dwight@dundermifflin.com": {
+            "password": "Xx7tQWHV"
+        },
+        "glewis@dundermifflin.com": {
+            "password": "6KAy4nSN"
+        }
+    }
+}
