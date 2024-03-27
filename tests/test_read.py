@@ -4,7 +4,6 @@ from dundie.core import load, read
 
 from .constants import PEOPLE_FILE
 
-
 # @pytest.mark.unit
 # def test_read_all_data():
 #     load(PEOPLE_FILE)
