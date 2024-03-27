@@ -13,7 +13,6 @@ virtualenv:
 ipython:
 	@.venv/bin/ipython
 
-
 lint:
 	@.venv/bin/flake8 --exclude=.venv,build
 
