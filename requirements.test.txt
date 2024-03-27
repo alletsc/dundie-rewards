@@ -1,7 +1,7 @@
 pytest
-
-# Linting - Code quality
+pytest-forked
 flake8
 pyproject-flake8
 black
 isort
+setuptools

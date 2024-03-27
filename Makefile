@@ -1,14 +1,16 @@
-.PHONY: install virtualenv ipython clean test watch lint
+.PHONY: install virtualenv ipython clean test pflake8
+
+
 install:
 	@echo "Installing for dev environment"
 	@.venv/bin/python -m pip install -e '.[dev]'
 
+
 virtualenv:
-	@echo "Creating virtual environment"
 	@.venv/bin/python -m pip -m venv .venv
 
+
 ipython:
-	@echo "Starting IPython"
 	@.venv/bin/ipython
 
 lint:
@@ -19,11 +21,12 @@ fmt:
 	@.venv/bin/black dundie tests integration
 
 test:
-	@.venv/bin/pytest -s
+	@DUNDIE_ENV=testing .venv/bin/pytest -s --forked
 
 watch:
-	#@.venv/bin/ptw
-	@ls **/*.py | entr pytest
+	# @.venv/bin/ptw
+	@ls **/*.py | DUNDIE_ENV=testing  entr pytest --forked
+
 
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;
@@ -39,3 +42,4 @@ clean:            ## Clean unused files.
 	@rm -rf htmlcov
 	@rm -rf .tox/
 	@rm -rf docs/_build
+

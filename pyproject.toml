@@ -6,36 +6,28 @@ testpaths = [
     "integration",
 ]
 
+
 [tool.flake8]
-exclude = [
-    ".venv",
-    "build",
-]
+exclude = [".venv", "build"]
 max-line-length = 79
+# extend-ignore = "W293,"
 
 [tool.black]
 line-length = 79
-target-version = ['py39']
+target-version = ["py36", "py37"]
 exclude = '''
 /(
-    \.git
-  | \.hg
-  | \.hg
-  | \.mypy_cache
-  | \.tox
+    \.eggs
+  | \.git
   | \.venv
   | _build
-  | buck-out
   | build
   | dist
   | migrations
 )/
 '''
+
 [tool.isort]
 profile = "black"
-multi_line_output = 3
-skip = [
-    ".venv",
-    "build",
-]
 src_paths = ["dundie", "tests", "integration"]
+multi_line_output = 3  # VHI
