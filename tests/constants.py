@@ -1,3 +1,4 @@
 import os
 
-PEOPLE_FILE = os.path.join(os.path.dirname(__file__), "assets/people.csv")
+TEST_PATH = os.path.dirname(__file__)
+PEOPLE_FILE = os.path.join(TEST_PATH, "assets/people.csv")
